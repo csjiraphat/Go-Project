@@ -13,6 +13,7 @@ type album struct {
     Artist string  `json:"artist"`
     Price  float64 `json:"price"`
 }
+
 // albums slice to seed record album data.
 var albums = []album{
     {ID: "1", Title: "Blue Train", Artist: "John Coltrane", Price: 56.99},
@@ -24,6 +25,7 @@ var albums = []album{
 func getAlbums(c *gin.Context) {
     c.IndentedJSON(http.StatusOK, albums)
 }
+
 // postAlbums adds an album from JSON received in the request body.
 func postAlbums(c *gin.Context) {
     var newAlbum album
@@ -42,7 +44,7 @@ func postAlbums(c *gin.Context) {
 func main() {
     router := gin.Default()
     router.GET("/albums", getAlbums)
-    router.POST("/albums", postAlbums)
+	router.POST("/albums", postAlbums)
 
-    router.Run("localhost:80")
+    router.Run("localhost:8080")
 }
