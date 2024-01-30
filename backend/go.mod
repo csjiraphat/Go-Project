@@ -1,6 +1,6 @@
-module github.com/anusornc/go-back-end
+module github.com/csjiraphat/go-backend
 
-go 1.20
+go 1.21.4
 
 require github.com/gin-gonic/gin v1.9.1
 

@@ -63,7 +63,7 @@ function Dashboard() {
               <ComplexStatisticsCard
                 icon="leaderboard"
                 title="Today's Users"
-                count="2,500"
+                count="2,300"
                 percentage={{
                   color: "success",
                   amount: "+3%",
